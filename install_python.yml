@@ -1,0 +1,16 @@
+---
+- name: Installer Python et pip sur le conteneur
+  hosts: checkpoint3
+  become: yes
+  tasks:
+    - name: Mettre à jour les paquets
+      apt:
+        update_cache: yes
+
+    - name: Installer Python3 et pip
+      apt:
+        name:
+          - python3
+          - python3-pip
+          - python3-venv
+        state: present

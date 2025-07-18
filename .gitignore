@@ -1,4 +1,6 @@
 # Files to ignore
 # Files to ignore
 terraform.tfvars
+venv/
+
 
